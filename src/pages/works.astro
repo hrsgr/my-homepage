@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Works | 〇〇のホームページ">
+	<h1>制作物</h1>
+	<ul>
+		<li>
+			<strong>このホームページ</strong> — Astroで作りました
+		</li>
+		<li>
+			<strong>MV</strong> — 授業で作ったMVです。下に埋め込んでいます↓
+		</li>
+        <div class="video-wrapper">
+            <iframe
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="デモ動画"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+            ></iframe>
+        </div>
+        <li>
+            <strong>ポモドーロタイマー</strong> ー 勉強用タイマーです
+        </li>
+        <li>
+            <strong>Todoリスト</strong> ー pythonのGUIの勉強のために作ったTodoリストです
+        </li>
+        <li>
+            <strong>テトリス</strong> ー コンソールで動作する簡単なテトリスです
+        </li>
+	</ul>
+</Layout>
+
+<style>
+    .video-wrapper iframe {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        border-radius: 8px;
+        border: none;
+        padding: 20px;
+    }
+</style>
