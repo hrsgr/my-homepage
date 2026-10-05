@@ -3,9 +3,53 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="いとのホームページ">
-	<h1>こんにちはいとです。</h1>
-	<p>神奈川工科大学の学生です。ここは私のホームページです。</p>
-	<h1>自己紹介ページ</h1>
-	<p>ここに自己紹介を書く予定です。</p>
-	<a href="/about">自己紹介ページへ</a>
+	<h1>こんにちは、<br class="sp-br">
+		いとです。</h1>
+	<p>このサイトでは成果物や日々の出来事を紹介したブログ等を掲載しています。</p>
+	<section class="menu-card">
+			<a href="/about">自己紹介ページへ
+				<h1>自己紹介ページ</h1>
+			</a>
+			
+			<a href="/works">制作物ページへ
+				<h1>制作物ページ</h1>
+			</a>
+	</section>
 </Layout>
+	
+<style>
+	.sp-br{
+		display: none;
+	}
+	@media screen and (max-width: 450px) {
+		.sp-br {
+    		display: inline-flex;
+  		}
+	}
+	.menu-card {
+		display: flex;
+		gap: 0.75rem;
+		border-radius: 15px;
+		margin-top: 2rem;
+		background-color: rgb(243, 236, 210);
+		padding: 5rex;
+		margin: 0 auto;
+	}
+
+	.menu-card a {
+		padding: 0.4rem 1rem;
+		border: rgba(0, 0, 255, 0.15);
+		border-radius: 20px;
+		color: #4a90d9;
+		text-decoration: none;
+		font-size: 0.9rem;
+		background-color:rgba(251, 244, 193, 0.74);
+		transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+	}
+	.menu-card a:hover {
+		background-color: #4a90d9;
+		color: #fff;
+	}
+</style>
