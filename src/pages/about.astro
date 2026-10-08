@@ -10,10 +10,10 @@ import Layout from '../layouts/Layout.astro';
 	<p>大学2学生です。最近はヒロアカにハマっています。</p>
 	<p></p>
 
-    <a href="/">トップページへ</a><br>
+    <a href="/" class="mypage_links">トップページへ</a><br>
 	
 	<h1>制作物</h1>
-	<a href="/works">制作物紹介ページへ</a><br>
+	<a href="/works" class="mypage_links">制作物紹介ページへ</a><br>
 	<h1>外部リンク</h1>
 	<div class="social-links">
 		<a href="https://twitter.com/hikakin" target="_blank" rel="noopener noreferrer">Twitter (X)</a>
@@ -28,6 +28,11 @@ import Layout from '../layouts/Layout.astro';
 		border-radius: 60%;
 		object-fit: cover;
 		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.55);
+	}
+	.mypage-links {
+		color: #4a90d9;
+		text-decoration: none;
+		transition: color 0.2s ease;
 	}
 	.social-links {
     display: flex;

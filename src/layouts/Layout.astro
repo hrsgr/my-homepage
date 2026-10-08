@@ -1,4 +1,5 @@
 ---
+import "../components/style.css"
 const { title } = Astro.props;
 ---
 
@@ -6,12 +7,16 @@ const { title } = Astro.props;
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" href="/images/sakaban.png">
 		<title>{title}</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700&display=swap"
-			rel="stylesheet"/>
+		<section >
+			<img src="/images/ito.png" alt="ロゴ写真">
+			<link rel="preconnect" href="https://fonts.googleapis.com" />
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+			<link
+				href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700&display=swap"
+				rel="stylesheet"/>
+		</section>
 	</head>
 	<body>
 		<header>
@@ -26,53 +31,6 @@ const { title } = Astro.props;
 			<slot />
 		</main>
 
-		<footer>"ちくわ大明神"</footer>
+		<footer>""------ちくわ大明神------""</footer>
 	</body>
 </html>
-
-<style>
-	body {
-		font-family: "Zen Kaku Gothic New", sans-serif;
-		line-height: 1.8;
-		color: #333;
-		background-color: #f4f6f8;
-	}
-
-	nav {
-		display: flex;
-		gap: 1.5rem;
-		padding-bottom: 1rem;
-		border-bottom: 1px solid #ddd;
-	}
-
-	nav a {
-		color: #4a90d9;
-		text-decoration: none;
-		transition: color 0.2s ease;
-	}
-
-	nav a:hover {
-		color: #2f6bb3;
-	}
-
-	main {
-		max-width: 1100px;
-		margin: 0 auto;
-		padding: 2rem 1.5rem;
-		background-color:#fff;
-		border-radius: 15px;
-		box-shadow:0 0 10 rgb(0, 0, 0,0.25);
-		padding: 2rem;
-		margin-top: 1.5rem;
-	}
-
-	footer {
-		margin-top: 2rem;
-		padding-top: 1rem;
-		padding: 100px;
-		font-size: 0.85rem;
-		color: #888;
-		background-color: #cbffc0;
-	}
-	
-</style>

@@ -2,10 +2,10 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="いとのホームページ">
-	<h1>こんにちは、<br class="sp-br">
-		いとです。</h1>
+<Layout title="しぐれのホームページ">
+	<h1>ようこそしぐれのサイトへ</h1>
 	<p>このサイトでは成果物や日々の出来事を紹介したブログ等を掲載しています。</p>
+	<p></p>
 	<section class="menu-card">
 			<a href="/about">自己紹介ページへ
 				<h1>自己紹介ページ</h1>
@@ -14,6 +14,7 @@ import Layout from '../layouts/Layout.astro';
 			<a href="/works">制作物ページへ
 				<h1>制作物ページ</h1>
 			</a>
+			
 	</section>
 </Layout>
 	
@@ -27,6 +28,7 @@ import Layout from '../layouts/Layout.astro';
   		}
 	}
 	.menu-card {
+		
 		display: flex;
 		gap: 0.75rem;
 		border-radius: 15px;
@@ -37,13 +39,14 @@ import Layout from '../layouts/Layout.astro';
 	}
 
 	.menu-card a {
+		width: 1200px;
 		padding: 0.4rem 1rem;
-		border: rgba(0, 0, 255, 0.15);
+		border: #0000ff26;
 		border-radius: 20px;
 		color: #4a90d9;
 		text-decoration: none;
 		font-size: 0.9rem;
-		background-color:rgba(251, 244, 193, 0.74);
+		background-color:#fbf4c1bd;
 		transition:
         background-color 0.2s ease,
         color 0.2s ease;

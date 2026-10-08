@@ -1,0 +1,64 @@
+	:root{
+        --blue: #528dc4;
+        --white: #ffffff;
+        --gray_white: #ddd; 
+        --pink: #fcd2d2;
+        --cream: #fbf4c1bd;
+
+    }
+    
+    img {
+		width: 3.5rem;
+		height: 3rem;
+		border-radius: 10%;
+		object-fit: cover;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.55);
+	}
+
+    header {
+		padding: 12px;
+	}
+	body {
+		font-family: "Zen Kaku Gothic New", sans-serif;
+		line-height: 1.8;
+		color: #333;
+		background: var(--blue);
+	}
+
+	nav {
+		display: flex;
+		gap: 1.5rem;
+		padding-bottom: 1rem;
+		border-bottom: 1px solid var(--gray_white);
+        justify-content: flex-end;
+	}
+
+	nav a {
+		color: var(--pink);
+		text-decoration: none;
+		transition: color 0.2s ease;
+	}
+
+	nav a:hover {
+		color: var(--white);
+	}
+
+	main {
+		max-width: 1100px;
+		margin: 0 auto;
+		padding: 2rem 1.5rem;
+		background-color:var(--gray_white);
+		border-radius: 15px;
+		box-shadow:0 0 10 rgb(0, 0, 0,0.25);
+		padding: 2rem;
+		margin-top: 1.5rem;
+	}
+
+	footer {
+
+		margin-top: 2rem;
+		font-size: 0.85rem;
+		color: var(--pink);
+		
+        text-align: center;
+	}
