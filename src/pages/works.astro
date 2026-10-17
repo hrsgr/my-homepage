@@ -2,41 +2,36 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Works | いとのホームページ">
+<Layout title="Works | しぐれのホームページ">
 	<h1>制作物</h1>
-	<ul>
-		<li>
+	<section class="">
+		<span class="works">
 			<strong>このホームページ</strong> — Astroで作りました
-		</li>
-		<li>
-			<strong>MV</strong> — 授業で作ったMVです。下に埋め込んでいます↓
-		</li>
-        <div class="video-wrapper">
-            <iframe
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="デモ動画"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-            ></iframe>
-        </div>
-        <li>
+        </span>
+        <span class="works">
             <strong>ポモドーロタイマー</strong> ー 勉強用タイマーです
-        </li>
-        <li>
+        </span>
+        <span class="works">
             <strong>Todoリスト</strong> ー pythonのGUIの勉強のために作ったTodoリストです
-        </li>
-        <li>
+        </span>
+        <span class="works">
             <strong>テトリス</strong> ー C++で作ったコンソールで動作する簡単なテトリスです
-        </li>
-	</ul>
+        </span>
+	</section>
 </Layout>
 
 <style>
-    .video-wrapper iframe {
-        width: 100%;
-        aspect-ratio: 16 / 9;
-        border-radius: 8px;
-        border: none;
-        padding: 20px;
+    .works{
+        border-radius: 15px;
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        background-color:rgb(174, 203, 233);
+        margin: 10px;
+        padding: 15px;
+        border: radius 10px;
+    }
+    .contents{
+        
     }
 </style>

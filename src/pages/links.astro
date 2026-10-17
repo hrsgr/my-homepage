@@ -1,0 +1,63 @@
+---
+import Layout from "../layouts/Layout.astro";
+import LinkCard from "../components/LinkCard.astro";
+---
+
+<Layout>
+    <h1>外部リンク</h1>
+	<div class="social-links">
+		<a href="https://x.com/hrsgr_yarn" target="_blank" rel="noopener noreferrer">Twitter (X)</a>
+		<a href="https://github.com/hrsgr" target="_blank" rel="noopener noreferrer"><img src="/images/GitHub_Lockup_Black.png"></a>
+	</div>
+	<h1>友達のサイト</h1>
+	<div class="friend-links">
+		<LinkCard
+		name="みりん星"
+		description="ポテトを愛しポテトに愛された人！楽器も絵も描けてすごい"
+		url="https://mirin-homepage.vercel.app/"
+		icon="https://unavatar.io/x/Mirin_2468"
+		/>
+        <LinkCard
+        name="トラマト"
+        description="ホームページ作成の解説を書いてくれた人！尊敬してます！！"
+        url="https://toramutton.me/"
+        icon="https://unavatar.io/x/ToraMutton"
+        />
+	</div>
+</Layout>
+
+<style>
+    .social-links {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+	}
+
+	.social-links a {
+		padding: 8% 20%;
+		border: 1px solid #4a90d9;
+		border-radius: 15px;
+		color: #4a90d9;
+		text-decoration: none;
+		font-size: 0.9rem;
+		transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+	}
+	.social-links a img{
+		width: 70px;
+	}
+	.social-links a:hover {
+		background-color: #4a90d9;
+		color: #fff;
+	}
+	.friend-links {
+        display: grid;
+        gap: 15px; 
+    }
+	.links {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap:15px;
+    }
+</style>
