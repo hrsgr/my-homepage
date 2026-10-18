@@ -1,24 +1,32 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import "../../styles/style.css"
 ---
 
 <Layout title="しぐれのホームページ">
-	
-	<h1>しぐれのサイトへようこそ</h1>
-	<p>このサイトでは成果物や日々の出来事を紹介したブログ等を掲載しています。</p>
-	<p></p>
+	<section class="top-card">
+		<span class="name-card">
+			<h1>
+				<img src="../../public/images/sakaban.png" alt="">
+				<h2>@hrsgr_yarn しぐれ</h2>
+			</h1>
+		</span>
+		<h3>アニメと歴史が好きです。</h3>
+	</section>
 	<section class="menu-card">
-			<a href="./about">自己紹介ページへ
-				<h1>自己紹介ページ</h1>
-				<p>こんちには</p>
-			</a>
-			
-			<a href="./works">制作物ページへ
-				<h1>制作物ページ</h1>
-			</a>
-			<a href="./links">リンクページへ
-				<h1>リンクページ</h1>
-			</a>
+		<a href="./about" class="backgraund_img about-card">
+			<h1>01.自己紹介ページ</h1>
+			<p>こんちには</p>
+		</a>	
+		<a href="./works" class="backgraund_img works-card">
+			<h1>02.制作物ページ</h1>
+		</a>
+		<a href="./articles" class="backgraund_img blog-card">
+			<h1>04.記事ページ</h1>
+		</a>
+		<a href="./links" class="backgraund_img links-card">
+			<h1>03.リンクページ</h1>
+		</a>
 	</section>
 	
 </Layout>
@@ -31,6 +39,29 @@ import Layout from '../layouts/Layout.astro';
     		display: inline-flex;
   		}
 	}
+	.name-card {
+		display: flex;
+		flex-direction: row;
+		gap: 0.2rem;
+		align-items: center;
+	}
+	.name-card img {
+		width: 120px;
+		height: 100px;
+		border-radius: 40px;
+		
+	}
+	.top-card {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+		border-radius: 15px;
+		background-color: rgba(0, 0, 0, 5%);
+		margin-top: 2rem;
+		padding: 3rex;
+		margin: 12px;
+
+	}
 	.menu-card {
 		display: flex;
 		flex-direction: column;
@@ -38,14 +69,15 @@ import Layout from '../layouts/Layout.astro';
 		border-radius: 15px;
 		margin-top: 2rem;
 		background-color: #fcd2d2;
-		padding: 5rex;
-		margin: 0 auto;
+		padding: 1rex;
+		margin: 12px;
 	}
+
 	.menu-card a {
 		min-height: 300px;
-		padding: 0.4rem 1rem;
+		padding: 1rem;
 		border-radius: 20px;
-		color: #4a90d9;
+		color: #fac2c2;
 		text-decoration: none;
 		font-size: 0.9rem;
 		background-color:#fffad3;
@@ -56,5 +88,28 @@ import Layout from '../layouts/Layout.astro';
 	.menu-card a:hover {
 		background-color: #4a90d9;
 		color: #fff;
+	
+	}
+	.backgraund_img{
+	    background-image:
+        linear-gradient(
+            rgba(15, 15, 15, 40%),
+            rgba(0, 0, 0, 30%)
+        ),
+		var(--card-image);
+		background-size: cover;
+		background-position: center;
+	}
+	.about-card {
+		--card-image: url("../../public/images/1866.png");
+	}
+	.works-card {
+    	--card-image: url("../../public/images/sakaban.png");
+	}
+	.blog-card {
+		--card-image: url("../../public/images/sakaban.png");
+	}
+	.links-card {
+    	--card-image: url("../../public/images/1866.png");
 	}
 </style>

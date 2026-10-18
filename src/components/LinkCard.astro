@@ -12,6 +12,7 @@ const {
     url,
     icon = ""
 } = Astro.props;
+import "../../styles/style.css"
 ---
 
 <a
@@ -41,14 +42,15 @@ const {
         align-items: center;
         gap: 15px;
         padding: 18px 20px;
-        border: 1px solid whitesmoke;
+        border: 1px solid var(--gray_white);
         text-decoration: none;
+    
         transition: ease;
     }
 
     .link-card:hover {
         transform: translateY(-3px);
-        border-color: skyblue;
+        border-color: var(--blue);
     }
 
     .icon {

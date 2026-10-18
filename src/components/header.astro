@@ -1,0 +1,58 @@
+---
+import "../../styles/style.css"
+---
+
+<header>
+	<div class="header_links">
+		<a href="./">はるしぐれ</a>
+		<nav>	
+			<a href="./">Home</a>
+			<a href="./about">About</a>			
+            <a href="./works">Works</a>
+			<a href="./links">links</a>
+		</nav>
+	</div>
+</header>
+
+<style>
+    header {
+		border-bottom: 1px solid var(--gray_white);
+		padding: 0.2rem;
+	}
+	.header_links{
+		max-width: 1000px;
+		padding: 0.5rem;
+		display: flex;
+		gap: 1.5rem;
+		align-items: center;
+		margin: 0 auto;
+		justify-content: space-between;
+		font-size: small;
+	}
+	
+	.header_links a {
+		color: var(--pink);
+		text-decoration: none;
+		transition: color 0.2s ease;
+	}
+	.header_links a:hover{
+		color: var(--white);
+	}
+    nav {
+		display: flex;
+		gap: 1.5rem;
+	}
+
+	nav a {
+		color: var(--pink);
+		text-decoration: none;
+		transition: color 0.2s ease;
+	}
+
+	nav a:hover {
+		color: var(--white);
+	}
+    @media screen and (max-width: 450px){
+		
+	}
+</style>

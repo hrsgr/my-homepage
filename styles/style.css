@@ -5,55 +5,12 @@
         --pink: #fcd2d2;
         --cream: #fbf4c1bd;
     }
-    header {
-		border-bottom: 1px solid var(--gray_white);
-		padding: 1.5rem;
-	}
-	.header_links{
-		max-width: 1000px;
-		padding: 0.5rem;
-		display: flex;
-		gap: 1.5rem;
-		align-items: center;
-		margin: 0 auto;
-		justify-content: space-between;
-	}
-	
-	.header_links a {
-		object-fit: cover;
-		display: flex;
-		gap: 1.5rem;
-		color: var(--pink);
-		text-decoration: none;
-		transition: color 0.2s ease;
-	}
-	.header_links a:hover{
-		color: var(--white);
-	}
 
 	body {
 		font-family: "Zen Kaku Gothic New", sans-serif;
 		line-height: 1.8;
 		color: #333;
 		background: var(--blue);
-	}
-
-	nav {
-		display: flex;
-		gap: 1.5rem;
-	}
-
-	nav a {
-		color: var(--pink);
-		text-decoration: none;
-		transition: color 0.2s ease;
-	}
-
-	nav a:hover {
-		color: var(--white);
-	}
-	@media screen and (max-width: 450px){
-		
 	}
 
 	main {
@@ -68,10 +25,19 @@
 	}
 
 	footer {
-
 		margin-top: 2rem;
 		font-size: 0.85rem;
 		color: var(--pink);
-		
         text-align: center;
+		margin-bottom: 2rem;
+	}
+	
+	h1,
+	h2,
+	h3,
+	h4{
+		margin: 0;
+	}
+	p{
+		margin: 0;
 	}
