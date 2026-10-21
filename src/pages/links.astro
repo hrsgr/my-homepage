@@ -4,11 +4,6 @@ import LinkCard from "../components/LinkCard.astro";
 ---
 
 <Layout>
-    <h1>外部リンク</h1>
-	<div class="social-links">
-		<a href="https://x.com/hrsgr_yarn" target="_blank" rel="noopener noreferrer">Twitter (X)</a>
-		<a href="https://github.com/hrsgr" target="_blank" rel="noopener noreferrer"><img src="/images/GitHub_Lockup_Black.png"></a>
-	</div>
 	<h1>友達のサイト</h1>
 	<div class="friend-links">
 		<LinkCard
@@ -27,31 +22,7 @@ import LinkCard from "../components/LinkCard.astro";
 </Layout>
 
 <style>
-    .social-links {
-    display: flex;
-    gap: 0.75rem;
-    margin-top: 1rem;
-	}
-
-	.social-links a {
-		min-width: 45%;
-		padding:9px 10px;
-		border: 1px solid #4a90d9;
-		border-radius: 15px;
-		color: #4a90d9;
-		text-decoration: none;
-		font-size: 0.9rem;
-		transition:
-        background-color 0.2s ease,
-        color 0.2s ease;
-	}
-	.social-links a img{
-		width: 70px;
-	}
-	.social-links a:hover {
-		background-color: #4a90d9;
-		color: #fff;
-	}
+    
 	.friend-links {
         display: grid;
         gap: 15px; 

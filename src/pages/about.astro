@@ -1,19 +1,36 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import "../../styles/style.css";
 ---
 
 <Layout title="About | しぐれのホームページ">
-	<img src="./images/sakaban.png" alt="プロフィール写真" class="profile-img" />
-	
-	<h1>自己紹介</h1>
-	<p>こんにちは。しぐれです。</p>
-	<p>大学2学生です。最近はヒロアカにハマっています。</p>
-	<p></p>
-	<h1>制作物</h1>
-	<a href="./works" class="mypage_links">制作物紹介ページへ</a><br>
-	<h1>好きなもの紹介</h1>
-	<strong>MV</strong> — 好きな動画です。
+	<h1>Profile</h1>
+	<div class="row">
+		<img src="./images/sakaban.png" alt="プロフィール写真" class="profile-img" />
+		<div class="collum">
+			<span class="block">
+				<h2>Univ</h2>
+				<p>KAIT B2 I科 CS</p>
+			</span>
+			<span class="block">
+				<h2>Name</h2>
+				<p>しぐれ @hrsgr_yarn</p>
+			</span>
+			<span class="block">
+				<h2>Hobby</h2>
+				<span class="lists">
+					<p class="card">読書</p>
+					<p class="card">アニメ</p>
+					<p class="card">ゲーム</p>
+					<p class="card">快活</p>
+				</span>	
+			</span>
+		</div>
+	</div>
+	<h1>Favorite</h1>
+	<strong>MV</strong>
 	<div class="video-wrapper">
+		<p>耳から離れない不思議な曲です。</p>
         <iframe
             src="https://www.youtube.com/embed/dQw4w9WgXcQ"
             title="Rick Astley - Never Gonna Give You Up"
@@ -21,27 +38,65 @@ import Layout from '../layouts/Layout.astro';
             allowfullscreen
         ></iframe>
     </div>
+	
+	<strong>アニメ</strong>
+	<p>最近は異世界転生ものを見ています。</p>
+	<strong>読書</strong>
+	<strong>ゲーム</strong>
 </Layout>
 
 <style>
+	.row{
+		display: flex;
+		align-items:center;
+		flex-direction: row;
+		gap: 2rem;
+	}
+	@media screen and (max-width:520px){
+		.row{
+			flex-direction: column;
+		}
+	}
+	.collum{
+		padding: 12px;
+		display: block;
+		flex: 1;
+		gap: 0.5rem;
+	}
+	.block{
+		display:flex;
+		flex-direction: row;
+		align-items: baseline;
+		gap: 0.5rem;
+	}
+	.lists{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
 	.profile-img {
-		width: 180px;
-		height: 180px;
-		border-radius: 60%;
+		margin: 5%;
+		width: calc(30% - 1rem);
+		height: auto;
+		aspect-ratio: 1/1;
 		object-fit: cover;
+		border-radius: 50%;
 		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.55);
 	}
-	.mypage-links {
-		color: #4a90d9;
-		text-decoration: none;
-		transition: color 0.2s ease;
+	.card{
+		border:1px solid var(--gray_white);
+		border-radius: 24px;
+		padding: 1px 7px;
+		margin: 0 2px;
 	}
 	.video-wrapper iframe {
-        width: 100%;
+        width: 90%;
         aspect-ratio: 16 / 9;
         border-radius: 8px;
         border: none;
-        padding: 20px;
-	}	
+        padding: 5%;
+	}
+	h1{
+		margin: 5px;
+	}
 </style>
-
