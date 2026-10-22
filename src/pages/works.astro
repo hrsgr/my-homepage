@@ -1,23 +1,34 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import WorksCard from '../components/WorksCard.astro';
 ---
 
 <Layout title="Works | しぐれのホームページ">
 	<h1>制作物</h1>
-	<section class="">
-		<span class="works">
-			<strong>このホームページ</strong> — Astroで作りました
-        </span>
-        <span class="works">
-            <strong>ポモドーロタイマー</strong> ー 勉強用タイマーです
-        </span>
-        <span class="works">
-            <strong>Todoリスト</strong> ー pythonのGUIの勉強のために作ったTodoリストです
-        </span>
-        <span class="works">
-            <strong>テトリス</strong> ー C++で作ったコンソールで動作する簡単なテトリスです
-        </span>
-	</section>
+    <WorksCard
+    name="ホームページ"
+    description="このページです。Astroで作りました"
+    url="https://github.com/hrsgr/my-homepage"
+    icon="./images/sakaban.png"
+    />
+    <WorksCard
+    name="ポモドーロタイマー"
+    description="ポモドーロ法を自動で行うための勉強用タイマーです。GUIはまだありません。"
+    url="https://github.com/hrsgr/pomodoro"
+    icon="./images/pomodoro.png"
+    />
+    <WorksCard
+    name="todoリスト"
+    description="pythonのGUI勉強のために作ったTodoリストです。"
+    url="https://github.com/hrsgr/todolist"
+    icon="./images/todolist.png"
+    />
+    <WorksCard
+    name="テトリス"
+    description="C++で作ったコンソールで動作する簡単なテトリスです。"
+    url="https://github.com/hrsgr/tetris"
+    icon="./images/tetoris.png"
+    />
 </Layout>
 
 <style>
